@@ -1,6 +1,74 @@
 .slider-wrapper{
-   max-width: 75rem;
-   height: 35rem;
+   width: 80%;
+   max-width: 37rem;
+   height: 80%;
+   max-height: 35rem;
    border: 5px solid white;
-   margin: 0  auto;
+   overflow: hidden;
+}
+.slides{
+   width: 400%;
+   display: flex;
+  
+}
+.slide{
+   transition: all .5s ease;
+   width: 100%;
+}
+.text-container{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ height: 2rem;
+ font-size: 1em;
+ color: beige;
+}
+
+input{position: absolute;
+   visibility: hidden;
+}
+.controls-block{
+   
+   display: flex;
+   width: 100%;
+   justify-content: end;
+}
+.controls-block_wrapper{
+   width: 40%;
+   display: flex;
+   justify-content: space-between;
+}
+.btn_wrapper{
+   width: 3rem;
+   height: 3rem;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.btn_wrapper:hover > .btn-label{
+         background-color: transparent;
+        border: 0.1em solid white;
+}
+   
+ 
+.btn-label{
+   width: 2rem;
+   height: 1rem;
+   background-color: rgb(171, 18, 104);
+   position: relative;
+   display: block;
+   border-radius: 1em;
+   cursor: pointer;
+   transition: all .3s ease;
+}
+#btn1:checked ~ .slide {
+   margin-left: -0%;
+} 
+#btn2:checked ~ .slide{
+   margin-left: -25%;
+}
+#btn3:checked ~ .slide{
+   margin-left: -50%;
+}
+#btn4:checked ~ .slide{
+   margin-left: -75%;
 }
